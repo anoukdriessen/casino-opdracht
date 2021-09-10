@@ -1,10 +1,15 @@
 package nl.novi.casino;
-import nl.novi.casino.games.higherandlower.HigherLowerGame;
+
+import nl.novi.casino.games.BlackJackGame;
+import nl.novi.casino.games.HigherLowerGame;
+
 import java.util.Scanner;
 
 /**
- * Edhub opdracht de gouden driehoek
- * Deze oefening bestaat uit acht losse opdrachten
+ * NOVI EDHUB OPDRACHT
+ * Golden Triangle Casino
+ *
+ * bestaat uit 8 losse onderdelen
  *
  * Casus:
  * Casino de gouden driehoek is een casino met meerdere locaties in Nederland hier kunnen verschillende spellen worden gespeeld.
@@ -16,18 +21,17 @@ import java.util.Scanner;
  * @author anoukdriessen
  */
 public class Main {
+    // zet AAN (true) om bepaalde debug messages/uitkomsten te zien
     public static final boolean DEBUGMODE = true;
 
-    /**
-     *
-     * @param args
-     */
     public static void main(String[] args) {
-        Scanner inputScanner = new Scanner(System.in);
+        Scanner in = new Scanner(System.in);
 
-        // STAP 1. De speler start het spel (de main methode wordt aangeroepen)
-        HigherLowerGame game = new HigherLowerGame(inputScanner);
-        game.playGame();
+//        HigherLowerGame higherLowerGame = new HigherLowerGame(in);
+//        higherLowerGame.playGame();
+
+//        BlackJackGame blackJackGame = new BlackJackGame(in);
+//        blackJackGame.playGame();
     }
 
 }
