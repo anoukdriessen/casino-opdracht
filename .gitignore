@@ -1,3 +1,16 @@
 ./idea
 *.iml
 *.xml
+out/production/casino/nl/novi/casino/games/blackjack/Card.class
+out/production/casino/nl/novi/casino/games/blackjack/CardSuit.class
+out/production/casino/nl/novi/casino/games/blackjack/CardValue.class
+out/production/casino/nl/novi/casino/games/blackjack/Deck.class
+out/production/casino/nl/novi/casino/games/blackjack/Hand.class
+out/production/casino/nl/novi/casino/games/blackjack/players/Dealer.class
+out/production/casino/nl/novi/casino/games/blackjack/players/Player.class
+out/production/casino/nl/novi/casino/games/blackjack/players/Players.class
+out/production/casino/nl/novi/casino/games/BlackJackGame.class
+out/production/casino/nl/novi/casino/games/HigherLowerGame.class
+out/production/casino/nl/novi/casino/Main.class
+out/production/casino/nl/novi/casino/Mechanics.class
+out/production/casino/nl/novi/casino/StringLib.class
