@@ -59,36 +59,52 @@ public class Player implements Players {
      */
     @Override
     public void performMove(Deck deck, String move) {
-        this.isStaying = false;
-        this.isHit = false;
-
+        // speler heeft een valide keuze gemaakt
         if (move.equalsIgnoreCase(HIT)) {
+            // de keuze is HIT
             this.isHit = true;
 
-            // preform hit on deck
-        } else if (move.equalsIgnoreCase(STAY)) {
+            // geef speler een kaart
+            givePlayerCard(deck);
+
+            // controleer of speler bust is
+            if (isPlayerBust()) {
+                // speler is bust
+                this.isBust = true;
+                System.out.println(getName() + " has " + getHandValue() + POINTS);
+                System.out.println(YOU_ARE + BUST);
+                // speler heeft verloren
+                System.out.println(YOU_HAVE + LOST + GAME);
+            }
+
+        } else {
+            // de keuze is STAY
             this.isStaying = true;
-
-            // preform stay, do nothing
         }
-
-        // check if user is bust
     }
 
-    /**
-     * Method add Cards to Hand
-     * @param cards the cards to add to hand
-     */
-    @Override
-    public void addCardsToHand(Card[] cards) {
-        for (int i = 0; i < cards.length; i++) {
-            System.out.println(ADDCARDTODECK);
-            hand.add(cards[i]);
+//    /**
+//     * Method add Cards to Hand
+//     * @param cards the cards to add to hand
+//     */
+//    @Override
+//    public void addCardsToHand(Card[] cards) {
+//        for (int i = 0; i < cards.length; i++) {
+//            System.out.println(ADDCARDTODECK);
+//            hand.add(cards[i]);
+//
+//            if (DEBUGMODE) {
+//                System.out.println("CARD " + i + " " + cards[i]);
+//            }
+//        }
+//    }
 
-            if (DEBUGMODE) {
-                System.out.println("CARD " + i + " " + cards[i]);
-            }
-        }
+    /**
+     * Method add Card to Hand
+     * @param card the card to add to hand
+     */
+    public void addCardToHand(Card card){
+        hand.add(card);
     }
 
     /**
@@ -113,6 +129,9 @@ public class Player implements Players {
      * Boolean to check if the player is Bust
      * @return true if the player is BUST
      */
+    public boolean isPlayerBust() {
+        return this.getHandValue() > 21;
+    }
     @Override
     public boolean isBust() {
         return this.isBust;
@@ -124,10 +143,15 @@ public class Player implements Players {
      */
     @Override
     public int getHandValue() {
+        int points = 0;
+
         // voor iedere kaart in hand
-        // tel de punten op
+        for (Card c : this.hand) {
+            // tel de punten op
+            points += c.getPoints();
+        }
         // retourneer de punten
-        return 0;
+        return points;
     }
 
     /**
@@ -142,15 +166,29 @@ public class Player implements Players {
             StringBuilder out = new StringBuilder();
             // voor iedere kaart in hand
             for (Card c : this.hand) {
-                out.append(c.toString());
+                out.append("- " + c.toString() + "\n");
             }
             // retourneer de output
             return out.toString();
         }
     }
 
+    /**
+     * getter voor naam van de speler
+     * @return de naam van de speler
+     */
+    public String getName() {
+        return name;
+    }
+
     @Override
     public String toString() {
         return this.name + " " + this.points + POINTS + showHand();
+    }
+
+    public void givePlayerCard(Deck deck) {
+        Card toGive = deck.getCard();
+        this.addCardToHand(toGive);
+        System.out.println(this.getName() + GOT + toGive);
     }
 }

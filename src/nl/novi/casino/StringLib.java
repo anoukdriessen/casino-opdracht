@@ -32,7 +32,6 @@ public class StringLib {
     public static final String DEALER = "DEALER";
     public static final String PLAYER = "PLAYER";
 
-    public static final String ADDCARDTODECK = "Added card to deck..";
     public static final String EMPTYHAND = " has no cards";
 
     public static final String TPOINTS = "Ten Points";
@@ -42,8 +41,10 @@ public class StringLib {
     public static final String LOST = "LOST";
     public static final String DRAW = "DRAW";
 
+    public static final String YOU_ARE = "You are ";
+    public static final String YOU_HAVE = "You have ";
+
     public static final String STAY = "STAY";
-    public static final String OR = "or";
     public static final String HIT = "HIT";
     public static final String BUST = "BUST";
 
@@ -63,15 +64,19 @@ public class StringLib {
 
     public static final String SHUFFELED = "Cards have been shuffeled, here we go!";
     public static final String ROUND = "ROUND: ";
-    public static final String GOT = " got the following cards: ";
-    public static final String CHOICE = "The choice is yours.. What is it going to be... ";
+    public static final String GOT = " got the card: ";
+    public static final String CHOICE = "The choice is yours.. What is it going to be... " + HIT + " or " + STAY;
+    public static final String INVALID_CHOICE = "This input is invalid please enter: " + HIT + " or " + STAY;
 
     public static final String[] CARDSUITS = new String[]{"diamonds", "hearts", "spades",  "clubs"};
     public static final char[] UNI_SUITS = new char[]{'\u2666', '\u2665', '\u2660', '\u2663'};
     public static final String[] COLORS = new String[]{"red", "black"};
 
     public static final String[] CARDS = new String[]{"Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King"};
+    public static final int[] VALUES = new int[]{2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10};
     public static final String POINTS = " points";
+    public static final String GAME = " this game!";
+    public static final String ANOTHER_ROUND = "No winner yet, we play another round";
 
 
 }

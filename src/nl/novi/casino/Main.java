@@ -30,8 +30,8 @@ public class Main {
 //        HigherLowerGame higherLowerGame = new HigherLowerGame(in);
 //        higherLowerGame.playGame();
 
-//        BlackJackGame blackJackGame = new BlackJackGame(in);
-//        blackJackGame.playGame();
+        BlackJackGame blackJackGame = new BlackJackGame(in);
+        blackJackGame.playGame();
     }
 
 }

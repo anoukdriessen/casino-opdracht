@@ -35,10 +35,10 @@ public interface Players {
     public void performMove(Deck deck, String move);
 
     /**
-     * Method add Cards to Hand
-     * @param cards the cards to add to hand
+     * Method add Card to Hand
+     * @param card the card to add to hand
      */
-    public void addCardsToHand(Card[] cards);
+    public void addCardToHand(Card card);
 
     /**
      * Method to add point to player
