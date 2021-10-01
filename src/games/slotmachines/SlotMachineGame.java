@@ -47,7 +47,10 @@ public class SlotMachineGame extends Game {
 
             showVariations(listOfVariations);
             System.out.println("Wil je stoppen type dan [ einde ]");
-            while (!input.hasNextInt(4)) {
+            while (!input.hasNextInt()) {
+                System.out.println(!input.hasNextInt());
+                System.out.println(input.hasNextInt());
+
                 String nextInput = input.nextLine();
                 if (nextInput.equalsIgnoreCase("einde")) {
                     if (this.credit < 100) {
