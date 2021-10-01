@@ -1,4 +1,4 @@
-import games.BlackJackGame;
+import games.blackjack.BlackJackGame;
 import games.Game;
 import games.HigherLowerGame;
 

@@ -1,5 +1,7 @@
-package games;
+package games.blackjack;
 
+import games.Game;
+import games.cards.BlackjackDeck;
 import games.players.BlackjackPlayer;
 import games.players.BlackjackDealer;
 

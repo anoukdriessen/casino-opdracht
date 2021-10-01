@@ -1,8 +1,4 @@
-package games;
-
-import games.cards.Card;
-import games.cards.Suit;
-import games.cards.Value;
+package games.cards;
 
 import java.util.Collections;
 import java.util.Stack;

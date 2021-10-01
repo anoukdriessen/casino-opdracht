@@ -1,6 +1,6 @@
 package games.players;
 
-import games.BlackjackDeck;
+import games.cards.BlackjackDeck;
 import games.cards.Card;
 
 /**

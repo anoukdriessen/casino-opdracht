@@ -1,7 +1,7 @@
 package games.players;
 
 import games.cards.Card;
-import games.BlackjackDeck;
+import games.cards.BlackjackDeck;
 
 /**
  * Klasse Blackjack Dealer is een onderdeel van het spel Blackjack
