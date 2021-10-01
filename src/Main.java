@@ -1,3 +1,4 @@
+import games.slotmachines.SlotMachineGame;
 import games.blackjack.BlackJackGame;
 import games.Game;
 import games.HigherLowerGame;
@@ -56,7 +57,11 @@ class Main {
                 3,
                 "Low-Deck Blackjack",
                 "dit spel is een variatie op het klassieke casino spel, deze variatie wordt gespeeld met een kaartendeck" +
-                        "bestaande uit alle kaarten met waardes tussen 2 en 6 en drie losse decks"
+                        "bestaande uit alle kaarten met waardes tussen 2 en 6 en drie losse decks"));
+        casinoGames.add(new SlotMachineGame(
+                4,
+                "Slot Machines",
+                "dit spel is een klassiek casino spel"
         ));
     }
 
@@ -79,8 +84,11 @@ class Main {
 //        toPlay.playGame(in);
 
         // test LowDeck Blackjack
-        toPlay = casinoGames.get(2);
-        toPlay.playGame(in);
+//        toPlay = casinoGames.get(2);
+//        toPlay.playGame(in);
 
+        // test SlotMachineGame
+        toPlay = casinoGames.get(3);
+        toPlay.playGame(in);
     }
 }
