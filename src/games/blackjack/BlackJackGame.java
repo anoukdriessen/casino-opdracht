@@ -2,6 +2,7 @@ package games.blackjack;
 
 import games.Game;
 import games.cards.BlackjackDeck;
+import games.cards.SimpleBlackjackDeck;
 import games.players.BlackjackPlayer;
 import games.players.BlackjackDealer;
 
@@ -11,18 +12,16 @@ import java.util.Scanner;
  * Klasse BlackJackGame is de tweede opdracht / spel van het casino
  * het is een bekend casino spel, ook wel bekend als 21e
  */
-public class BlackJackGame extends Game {
+public abstract class BlackJackGame extends Game {
     private final static String HIT = "hit";
     private final static String STAY = "stay";
 
-    private BlackjackDeck deck;
+    protected BlackjackDeck deck;
     private BlackjackPlayer player;
     private BlackjackDealer dealer;
 
     public BlackJackGame(int number, String name, String uitleg) {
         super(number, name, uitleg);
-        // maak een nieuw deck
-         this.deck = new BlackjackDeck();
     }
 
     /**

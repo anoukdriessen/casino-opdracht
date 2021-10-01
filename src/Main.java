@@ -1,6 +1,8 @@
 import games.blackjack.BlackJackGame;
 import games.Game;
 import games.HigherLowerGame;
+import games.blackjack.LowDeckBlackjackGame;
+import games.blackjack.SimpleBlackJackGame;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -46,10 +48,15 @@ class Main {
                 "Hoger en Lager",
                 "dit spel draait om puur geluk\nIk genereer een random getal en jij moet deze raden, " +
                         "ik geef hints of het getal hoger of lager is dan jij geraden hebt."));
-        casinoGames.add(new BlackJackGame(
+        casinoGames.add(new SimpleBlackJackGame(
                 2,
                 "Classic Blackjack",
-                "dit spel is een klassiek casino spel, zorg dat je niet boven de 21 punten kijgt!"
+                "dit spel is een klassiek casino spel, zorg dat je niet boven de 21 punten kijgt!"));
+        casinoGames.add(new LowDeckBlackjackGame(
+                3,
+                "Low-Deck Blackjack",
+                "dit spel is een variatie op het klassieke casino spel, deze variatie wordt gespeeld met een kaartendeck" +
+                        "bestaande uit alle kaarten met waardes tussen 2 en 6 en drie losse decks"
         ));
     }
 
@@ -67,8 +74,12 @@ class Main {
 //        toPlay = casinoGames.get(0);
 //        toPlay.playGame(in);
 
-        // test Blackjack
-        toPlay = casinoGames.get(1);
+        // test Classic Blackjack
+//        toPlay = casinoGames.get(1);
+//        toPlay.playGame(in);
+
+        // test LowDeck Blackjack
+        toPlay = casinoGames.get(2);
         toPlay.playGame(in);
 
     }
