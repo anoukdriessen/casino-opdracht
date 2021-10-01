@@ -1,3 +1,4 @@
+import games.BlackJackGame;
 import games.Game;
 import games.HigherLowerGame;
 
@@ -39,11 +40,17 @@ class Main {
 
     public static void getCasinoGames() {
         casinoGames = new ArrayList<>();
+        // opdracht 1: Spel Higher and Lower
         casinoGames.add(new HigherLowerGame(
                 1,
                 "Hoger en Lager",
                 "dit spel draait om puur geluk\nIk genereer een random getal en jij moet deze raden, " +
                         "ik geef hints of het getal hoger of lager is dan jij geraden hebt."));
+        casinoGames.add(new BlackJackGame(
+                2,
+                "Classic Blackjack",
+                "dit spel is een klassiek casino spel, zorg dat je niet boven de 21 punten kijgt!"
+        ));
     }
 
     public static void letPlayerChooseGame(Scanner in){
@@ -56,7 +63,12 @@ class Main {
 
         System.out.print("\nIk kies spel: ");
 
-        toPlay = casinoGames.get(0);
+        // test HigherLower
+//        toPlay = casinoGames.get(0);
+//        toPlay.playGame(in);
+
+        // test Blackjack
+        toPlay = casinoGames.get(1);
         toPlay.playGame(in);
 
     }
